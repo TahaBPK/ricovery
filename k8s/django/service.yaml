@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: counter-app-service
+spec:
+  selector:
+    app: counter-app
+  type: NodePort
+  ports:
+  - name: counter-app
+    protocol: TCP
+    port: 8000
+    targetPort: 8000
+    nodePort: 30001
